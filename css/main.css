@@ -91,10 +91,25 @@ video.frame-media_left{
     position: relative;
     left: 18vw;
 }
+.text-left > * {
+    position: relative;
+    right: 18vw;
+}
 .frame h3{
     font-size: calc(var(--index) * 3);
 }
 .frame p{
     max-width: 30vw;
     margin-top: 3vh;
+}
+.button-mp3{
+    position: fixed;
+    bottom: 5vh;
+    right: 5vw;
+    cursor: pointer;
+    width: 25px;
+    transition: .25s ease;
+}
+.button-mp3.paused{
+    opacity: .25;
 }
