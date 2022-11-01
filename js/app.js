@@ -32,3 +32,10 @@ buttonMp3.addEventListener('click', e => {
     buttonMp3.classList.toggle('paused');
     audio.paused ? audio.play() : audio.pause()
 });
+
+window.onfocus = function(){
+    buttonMp3.classList.contains('paused') ? audio.pause() : audio.play()
+}
+window.onblur = function(){
+    audio.pause()
+}
