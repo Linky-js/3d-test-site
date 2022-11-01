@@ -21,4 +21,14 @@ window.onscroll = function() {
         frame.setAttribute('style', `transform: ${transform}; opacity: ${opacity}`)
     })
 }
-window.scrollTo(0, 1)
+window.scrollTo(0, 1);
+
+//audio
+
+let buttonMp3 = document.querySelector('.button-mp3');
+let audio = document.querySelector('.audio');
+
+buttonMp3.addEventListener('click', e => {
+    buttonMp3.classList.toggle('paused');
+    audio.paused ? audio.play() : audio.pause()
+});
